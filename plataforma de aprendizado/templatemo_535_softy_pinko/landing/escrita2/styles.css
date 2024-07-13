@@ -1,0 +1,115 @@
+/* Define que o corpo e o HTML ocuparão toda a altura da viewport */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Define posição relativa para que o rodapé seja posicionado corretamente */
+}
+
+.bodyescrita2 {
+    background-image: url('fundo.jpeg');
+    /* Substitua 'fundo.jpeg' pelo caminho da sua imagem */
+    background-size: cover;
+    /* Faz com que a imagem cubra todo o corpo */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita a repetição da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.hiddenescrita2 {
+    display: none;
+}
+
+.errorescrita2 {
+    color: red;
+    font-weight: bold;
+    position: absolute; /* Posicionamento absoluto para colocar no rodapé */
+    bottom: 20px; /* Distância do rodapé */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige o posicionamento no centro */
+}
+
+.texto-erroescrita2 {
+    color: red;
+    font-weight: bold;
+    position: absolute; /* Posicionamento absoluto para colocar no rodapé */
+    bottom: 20px; /* Distância do rodapé */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige o posicionamento no centro */
+}
+
+/* Centraliza a seção */
+#main-contentescrita2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Estiliza a caixa principal */
+.principalescrita2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ccc; /* Borda do quadrado */
+    padding: 60px;
+    color: aliceblue; /* Cor do texto dentro do quadrado */
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+    background-color: rgba(2, 112, 2, 0);
+    width: 80%; /* Ajuste a largura conforme desejado */
+    max-width: 600px; /* Defina uma largura máxima se desejar */
+    position: relative; /* Garante que os elementos posicionados absolutamente estejam relativos a esta div */
+    margin-left: 650px;
+    margin-top: 120px;
+}
+
+.principalescrita2:hover {
+    background-color: #064000; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 0 10px rgb(43, 255, 0); /* Sombra ao passar o mouse */
+}
+
+/* Estiliza a caixa de resposta */
+.caixa-de-respostaescrita2 {
+    margin-top: 20px; /* Ajuste conforme necessário */
+    width: 100%; /* Ajuste a largura conforme desejado */
+    max-width: 400px; /* Defina uma largura máxima se desejar */
+    height: 70px; /* Ajuste a altura conforme desejado */
+    border-radius: 50px; /* Bordas arredondadas */
+    border: 2px solid #ffffff00; /* Borda da caixa de resposta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+    font-size: 18px; /* Ajuste o tamanho do texto conforme desejado */
+    margin-left: 50px;
+    margin-bottom: 15px;
+    
+}
+
+.caixa-de-respostaescrita2 input {
+    width: 90%; /* Ajuste a largura do input para ocupar a maior parte da caixa */
+    height: 90%; /* Ajuste a altura do input para ocupar a maior parte da caixa */
+    border: none; /* Remove a borda do input */
+    background: none; /* Remove o fundo do input */
+    outline: none; /* Remove o contorno ao focar */
+    font-size: inherit; /* Herda o tamanho do texto da caixa */
+}
+
+.caixa-de-respostaescrita2:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+    border-color: #ffffff00; /* Cor da borda ao passar o mouse */
+    box-shadow: 0 0 10px rgb(43, 255, 0)
+}
+
+.digite-o-textoescrita2 {
+    margin-left: 15px;
+}

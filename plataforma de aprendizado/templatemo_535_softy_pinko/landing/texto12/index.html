@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body12">
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados em apresentar uma funcionalidade poderosa e flexível do HTMX que oferece
+            um controle refinado sobre suas requisições HTTP: o atributo `hx-headers`. Com `hx-headers`, você
+            pode incluir cabeçalhos personalizados nas requisições HTTP, oferecendo maior controle e
+            personalização nas interações do usuário com sua aplicação. Vamos explorar como essa
+            funcionalidade pode elevar o nível das suas aplicações web.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-headers`?
+            <br>
+            <br>
+            O `hx-headers` é um atributo do HTMX que permite adicionar cabeçalhos personalizados às
+            requisições HTTP. Cabeçalhos HTTP são informações adicionais enviadas junto com a requisição,
+            que podem ser usadas para diversas finalidades, como autenticação, controle de cache,
+            especificação de formatos de dados, entre outros. O uso de `hx-headers` é especialmente útil
+            quando você precisa enviar informações adicionais ao servidor de forma consistente em todas as
+            requisições feitas por elementos HTMX.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-headers` pode ser usado.
+            Suponha que você tenha um formulário de login e deseja enviar um cabeçalho personalizado para
+            autenticação:
+        </p>
+       
+        <p class="p4">
+            <img src="12.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, quando o formulário de login é submetido (requisição HTTP POST para a URL
+            &quot;/autenticar&quot;), o cabeçalho personalizado `Authorization` com o valor `Bearer abc123` é incluído na
+            requisição graças ao atributo `hx-headers`. O servidor pode então usar esse cabeçalho para
+            autenticar a requisição.
+        </p>
+        <button hx-get="landing/escrita7/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+       
+        
+    </div>
+</body>
+</html>

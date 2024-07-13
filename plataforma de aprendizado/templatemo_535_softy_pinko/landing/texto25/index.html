@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos animados para apresentar a você uma poderosa funcionalidade do HTMX que permite associar eventos JavaScript a elementos HTML de forma declarativa: o atributo `hx-on`. Com `hx-on`, você pode facilmente definir quais eventos devem disparar requisições AJAX ou outras ações, proporcionando um controle fino sobre a interatividade em suas aplicações web. Vamos explorar como essa funcionalidade pode ser utilizada para criar uma experiência de usuário mais dinâmica e responsiva.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-on`?
+        </p>
+        
+        <p class="p3">
+            O `hx-on` é um atributo do HTMX que permite associar eventos JavaScript a elementos HTML, de maneira declarativa, diretamente no markup. Isso significa que você pode especificar eventos como cliques, mudanças de valor, carregamento de elementos e muito mais, sem a necessidade de escrever código JavaScript separado para adicionar event listeners.
+        </p>
+       
+        <p class="p4">
+            Como Funciona?
+        </p>
+
+        <p class="p5">
+            Vamos ver um exemplo prático para entender melhor como o `hx-on` pode ser usado. Suponha que você queira fazer uma requisição AJAX quando um botão é clicado e outra requisição quando o mouse passa sobre um elemento:
+        </p>
+      
+        <p class="p6">
+            <img src="25.png" alt="">
+        </p>
+
+        <p class="p7">
+            Neste exemplo, o botão tem uma requisição AJAX associada ao evento `click`. Quando o botão é clicado, a requisição para `/acao-clique` é disparada. Da mesma forma, a `div` tem uma requisição associada ao evento `mouseover`. Quando o mouse passa sobre a `div`, a requisição para `/acao-hover` é disparada.
+        </p>
+        <button hx-get="landing/texto26/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+    </div>
+</body>
+</html>

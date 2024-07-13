@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados para apresentar a você uma funcionalidade poderosa do HTMX que
+            permite coordenar e sincronizar múltiplas requisições AJAX de maneira eficiente: o atributo
+            `hx-sync`. Com `hx-sync`, você pode controlar como suas requisições AJAX interagem entre si,
+            evitando conflitos e melhorando a gestão de estado em suas aplicações web. Vamos explorar
+            como essa funcionalidade pode otimizar suas interações web.
+    
+        <p class="p2">
+            O que é o atributo `hx-sync`?
+            <br><br>
+            O `hx-sync` é um atributo do HTMX que permite especificar regras de sincronização para
+            requisições AJAX. Ele ajuda a evitar colisões e garante que as requisições sejam processadas na
+            ordem correta, proporcionando uma experiência de usuário mais consistente e previsível.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br><br>
+            O `hx-sync` aceita uma expressão que define como as requisições devem ser sincronizadas.
+            Existem algumas palavras-chave importantes que você pode usar:
+            <br><br>
+            - `this`: Refere-se ao elemento atual.
+            <br>
+            - `#id`: Refere-se a um elemento específico pelo seu ID.
+            <br>
+            - `tag`: Refere-se a um elemento por sua tag.
+            <br><br>
+            Você pode usar essas palavras-chave em combinações para definir regras de sincronização.
+        </p>
+       
+        <p class="p4">
+            Exemplo de Sincronização Simples
+            <br><br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-sync` pode ser usado.
+            Suponha que você tenha vários botões que realizam requisições AJAX e você deseja garantir
+            que apenas uma requisição seja processada por vez:
+        </p>
+      
+        <p class="p5">
+           <img src="24.png" alt="">
+        </p>
+       
+        <p class="p6">
+            Neste exemplo, ao clicar em qualquer um dos botões, a requisição AJAX será sincronizada,
+            garantindo que apenas uma requisição esteja em andamento por vez. As requisições subsequentes
+            serão enfileiradas e processadas na ordem.
+        </p>
+        <button hx-get="landing/texto25/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </div>
+</body>
+</html>

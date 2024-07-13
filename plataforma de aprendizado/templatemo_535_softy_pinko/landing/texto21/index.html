@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados para apresentar a você uma funcionalidade incrível do HTMX que pode
+            transformar a navegação e as interações em sua aplicação web: o atributo `hx-boost`. Com `hx-
+            boost`, você pode melhorar a experiência de usuário, tornando os links e formulários mais
+            dinâmicos e responsivos, sem a necessidade de recarregar a página inteira. Vamos explorar
+            como essa funcionalidade pode fazer a diferença em suas interações web.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-boost`?
+            <br><br>
+            O `hx-boost` é um atributo do HTMX que pode ser aplicado a links (`&lt;a&gt;`) e formulários
+            (`&lt;form&gt;`) para melhorar a navegação e as interações, transformando-as em requisições AJAX
+            que atualizam partes específicas do DOM. Isso proporciona uma experiência de usuário mais
+            fluida, semelhante a uma aplicação de página única (SPA), sem a complexidade adicional.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br><br>
+            Vamos ver alguns exemplos práticos de como o `hx-boost` pode ser utilizado.
+        </p>
+       
+        <p class="p4">
+            Melhorando Links
+            <br>
+            Suponha que você tenha um link que, ao ser clicado, deve carregar conteúdo e atualizar uma
+            parte específica da página:
+        </p>
+      
+        <p class="p5">
+            <img src="21.png" alt="">
+        </p>
+       
+        <p class="p6">
+            Neste exemplo, quando o link é clicado, a requisição é feita via AJAX, e o conteúdo da resposta é
+            inserido automaticamente no elemento do DOM apropriado. Isso evita o recarregamento completo
+            da página.
+        </p>
+        <button hx-get="landing/texto22/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos entusiasmados para apresentar a você uma funcionalidade do HTMX que permite um
+            controle refinado sobre o histórico de navegação do navegador: o atributo `hx-history-elt`.
+        </p>
+    
+        <p class="p2">
+            Com `hx-history-elt`, você pode designar um elemento específico para gerenciar o histórico de
+            navegação, proporcionando uma experiência de usuário mais consistente e previsível. Vamos
+            explorar como essa funcionalidade pode transformar suas interações web.        
+        <p class="p3">
+            O que é o atributo `hx-history-elt`?
+            <br><br>
+            O `hx-history-elt` é um atributo do HTMX que identifica o elemento do DOM que deve ser
+            usado para armazenar o estado do histórico de navegação. Isso é especialmente útil para
+            aplicações que requerem controle detalhado sobre o histórico, como páginas que utilizam
+            navegação AJAX para atualizar partes da interface sem recarregar a página inteira.
+        </p>
+       
+        <p class="p4">
+            Como Funciona?
+            <br><br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-history-elt` pode ser usado.
+            Suponha que você tenha uma área de conteúdo que deve ser atualizada dinamicamente e
+            você deseja que o histórico de navegação reflita essas mudanças:
+        </p>
+      
+        <p class="p5">
+            <img src="23.png" alt="">
+        </p>
+       
+        <p class="p6">
+            Neste exemplo, o elemento `&lt;div id=&quot;conteudo-dinamico&quot;&gt;` está marcado com `hx-history-
+            elt=&quot;true&quot;`, o que significa que ele será usado para armazenar o estado do histórico. Quando os links
+            são clicados, o conteúdo do `#conteudo-dinamico` é atualizado via AJAX e o histórico de navegação
+            é gerenciado automaticamente, permitindo que o usuário use os botões de voltar e avançar do
+            navegador para navegar entre os estados.
+        </p>
+        <button hx-get="landing/texto24/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+       
+    </div>
+</body>
+</html>

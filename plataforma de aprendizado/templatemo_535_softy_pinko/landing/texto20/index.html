@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos entusiasmados para apresentar a você uma funcionalidade poderosa do HTMX que
+            permite um controle refinado sobre como eventos de servidor são manipulados e inseridos no
+            DOM: o atributo `hx-sse`. Com `hx-sse`, você pode configurar seus elementos HTML para
+            receber atualizações em tempo real diretamente do servidor, proporcionando uma
+            experiência de usuário mais dinâmica e interativa. Vamos explorar como essa funcionalidade
+            pode transformar suas interações web.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-sse`?
+            <br>
+            <br>
+            O `hx-sse` é um atributo do HTMX que define a configuração para receber eventos enviados
+            pelo servidor (Server-Sent Events). Ele permite que seus elementos HTML sejam atualizados
+            automaticamente quando o servidor envia novos dados, sem a necessidade de uma requisição
+            explícita do cliente. Isso é especialmente útil para aplicações que requerem atualizações em
+            tempo real, como notificações, feeds de atividades ou dashboards.
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-sse` pode ser usado.
+            Suponha que você tenha uma área de notificações que deve ser atualizada sempre que novos
+            eventos são enviados pelo servidor:
+        </p>
+       
+        <p class="p4">
+            <img src="20.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, o elemento `&lt;div&gt;` está configurado para se conectar à API de eventos no endpoint
+            `/sua-api-de-eventos`. Quando o servidor envia um evento, a função `atualizarNotificacoes` é
+            chamada para atualizar a área de notificações com o novo conteúdo.
+        </p>
+        <button hx-get="landing/texto21/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+        
+    </div>
+</body>
+</html>

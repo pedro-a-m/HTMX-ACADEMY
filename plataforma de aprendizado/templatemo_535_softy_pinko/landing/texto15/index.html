@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos animados para compartilhar com você uma funcionalidade poderosa e flexível do HTMX
+            que oferece um controle refinado sobre os parâmetros enviados nas requisições HTTP: o atributo
+            `hx-params`. Com `hx-params`, você pode especificar exatamente quais parâmetros devem ser
+            incluídos ou excluídos na requisição, proporcionando uma maior precisão e personalização nas
+            interações do usuário com sua aplicação. Vamos explorar como essa funcionalidade pode elevar o
+            nível das suas aplicações web.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-params`?
+            <br>
+            <br>
+            O `hx-params` é um atributo do HTMX que permite controlar quais parâmetros de um formulário
+            serão incluídos na requisição HTTP. Isso é especialmente útil quando você deseja enviar apenas um
+            subconjunto dos dados do formulário ou excluir determinados parâmetros das requisições. O `hx-
+            params` pode ser configurado para incluir ou excluir parâmetros específicos, oferecendo uma
+            grande flexibilidade.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-params` pode ser usado. Suponha
+            que você tenha um formulário de pesquisa com vários campos, mas deseja enviar apenas alguns
+            deles na requisição:
+        </p>
+       
+        <p class="p4">
+            <img src="15.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, quando o formulário de feedback é submetido, o parâmetro `email` é excluído da
+            requisição HTTP POST para a URL &quot;/enviar-feedback&quot;, graças ao atributo `hx-params` configurado
+            com `exclude: email`. Apenas os parâmetros `nome` e `comentarios` são enviados na requisição.
+        </p>
+        <button hx-get="landing/texto16/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+       
+        
+    </div>
+</body>
+</html>

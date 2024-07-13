@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 2 - Escrita</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyescrita5">
+    <div class="principalescrita5">
+        <header>
+            <h1 class="missao-2-escritaescrita5">Disparar Requisição</h1>
+        </header>
+        <main id="main-content">
+            <section class="centerescrita5">
+                <h2 class="digite-o-textoescrita5">Qual atributo HTMX define o evento que dispara a requisição?.</h2>
+                <input class="caixa-de-respostaescrita5" type="text" id="textInput" placeholder="Digite aqui...">
+                <div id="errorMessage" class="hidden errorescrita5" class="erro-textoescrita5">Erro: texto incorreto.</div>
+            </section>
+        </main>
+        <button hx-get="landing/texto8/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </div>
+    <script>
+        const textInput = document.getElementById('textInput');
+        const errorMessage = document.getElementById('errorMessage');
+        textInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const correctText = 'hx-trigger';
+                if (textInput.value === correctText) {
+                    // Usa HTMX para carregar a próxima missão
+                    htmx.ajax('GET', 'missao3.html', '#main-content');
+                }
+                 else {
+                    errorMessage.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
+</body>

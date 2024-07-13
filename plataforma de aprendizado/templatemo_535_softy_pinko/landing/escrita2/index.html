@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 2 - Escrita</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyescrita2">
+    <div class="principalescrita2">
+        <header>
+            <h1 class="missao-2-escritaescrita2">Enviar Dados</h1>
+        </header>
+        <main id="main-content">
+            <section class="centerescrita2">
+                <h2 class="digite-o-textoescrita2">Qual atributo HTMX é usado para enviar dados via requisição HTTP POST?.</h2>
+                <input class="caixa-de-respostaescrita2" type="text" id="textInput" placeholder="Digite aqui...">
+                <div id="errorMessage" class="hidden errorescrita2" class="erro-textoescrita2">Erro: texto incorreto.</div>
+            </section>
+        </main>
+        <button hx-get="landing/texto5/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+    </div>
+    <script>
+        const textInput = document.getElementById('textInput');
+        const errorMessage = document.getElementById('errorMessage');
+        textInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const correctText = 'hx-post';
+                if (textInput.value === correctText) {
+                    // Usa HTMX para carregar a próxima missão
+                    htmx.ajax('GET', 'missao3.html', '#main-content');
+                }
+                 else {
+                    errorMessage.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
+</body>

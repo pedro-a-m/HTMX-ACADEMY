@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body9">
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados em apresentar uma funcionalidade poderosa e essencial do HTMX que transforma a navegação em suas aplicações web: o atributo `hx-push-url`. Com `hx-push-url`, você pode atualizar a URL do navegador sem recarregar a página, proporcionando uma experiência de usuário mais fluida e moderna. Vamos explorar como essa funcionalidade pode elevar o nível das suas aplicações web.
+
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-push-url`?
+        </p>
+        
+        <p class="p3">
+            O `hx-push-url` é um atributo do HTMX que permite modificar a URL do navegador quando uma requisição HTTP é concluída, sem a necessidade de recarregar a página. Isso significa que você pode manter o estado da aplicação refletido na URL, facilitando o compartilhamento de links e a navegação do usuário, tudo de maneira transparente e eficiente.
+        </p>
+       
+        <p class="p4">
+            Como Funciona?
+        </p>
+
+        <p class="p5">
+            Vamos ver um exemplo prático para entender melhor como o `hx-push-url` pode ser usado. Suponha que você tenha uma lista de produtos e deseja que a URL do navegador seja atualizada com o ID do produto quando o usuário clicar em um item para ver seus detalhes:
+        </p>
+      
+        <p class="p6">
+            <img src="9.png" alt="">
+        </p>
+
+        <p class="p7">
+            Neste exemplo, quando o usuário clica em um link de produto, a requisição HTTP GET é enviada para a URL "/detalhes-produto/1" ou "/detalhes-produto/2". A resposta é então inserida no `div` com id "detalhes-produto" graças ao atributo `hx-target`. O atributo `hx-push-url="true"` garante que a URL do navegador seja atualizada com a URL da requisição, sem recarregar a página. Isso permite que a URL reflita o estado atual da aplicação, facilitando o compartilhamento e a navegação.
+        </p>
+        <button hx-get="landing/texto10/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+    </div>
+</body>
+</html>

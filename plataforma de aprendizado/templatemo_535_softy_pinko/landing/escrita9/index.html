@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 2 - Escrita</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyescrita9">
+    <div class="principalescrita9">
+        <header>
+            <h1 class="missao-2-escritaescrita9">Exibir Confirmação</h1>
+        </header>
+        <main id="main-content">
+            <section class="centerescrita9">
+                <h2 class="digite-o-textoescrita9">Qual atributo HTMX exibe uma mensagem de confirmação antes de enviar a requisição?.</h2>
+                <input class="caixa-de-respostaescrita9" type="text" id="textInput" placeholder="Digite aqui...">
+                <div id="errorMessage" class="hidden errorescrita9" class="erro-textoescrita9">Erro: texto incorreto.</div>
+            </section>
+        </main>
+        <button hx-get="landing/texto12/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </div>
+    <script>
+        const textInput = document.getElementById('textInput');
+        const errorMessage = document.getElementById('errorMessage');
+        textInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const correctText = 'hx-confirm';
+                if (textInput.value === correctText) {
+                    // Usa HTMX para carregar a próxima missão
+                    htmx.ajax('GET', 'missao3.html', '#main-content');
+                }
+                 else {
+                    errorMessage.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
+</body>

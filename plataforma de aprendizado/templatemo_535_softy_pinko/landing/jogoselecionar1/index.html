@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Escolha Múltipla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyselecionar1">
+    <div class="principalselecionar1">
+        <header>
+            <h1 class="titulo">Selecione a opção correta:</h1>
+        </header>
+    
+        <main id="main-content">
+            <h2 class="pergunta">Exibe uma caixa de diálogo para entrada do usuário antes de enviar a requisição.</h2>
+    
+            <form id="quizForm" class="escolha">
+                <div class="opcoes">
+                    <input type="radio" id="cancel" name="resposta" value="hx-cancel">
+                    <label class="resposta1" for="cancel">hx-cancel</label><br>
+    
+                    <input type="radio" id="preserve" name="resposta" value="hx-preserve">
+                    <label class="resposta2" for="preserve">hx-preserve</label><br>
+
+                    <input type="radio" id="params" name="resposta" value="hx-params">
+                    <label class="resposta3" for="params">hx-params</label><br>
+
+                    <input type="radio" id="select-oob" name="resposta" value="hx-select-oob">
+                    <label class="resposta4" for="select-oob">hx-select-oob</label><br>
+
+                    <input type="radio" id="prompt" name="resposta" value="hx-prompt">
+                    <label class="resposta5" for="prompt">hx-prompt</label><br>
+                </div>
+    
+                <div class="botoes">
+                    <button class="botao" type="button" onclick="checkAnswer()">Enviar</button>
+                </div>
+            </form>
+    
+            <div class="message" id="quizMessage"></div>
+            <button hx-get="landing/texto7/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+        </main>
+    </div>
+ 
+    <script>
+        function checkAnswer() {
+            const quizForm = document.getElementById('quizForm');
+            const selectedOption = quizForm.querySelector('input[name="resposta"]:checked').value;
+            const quizMessage = document.getElementById('quizMessage');
+
+            if (selectedOption === 'hx-prompt') {
+                quizMessage.textContent = 'Resposta correta';
+                quizMessage.className = 'message correct';
+
+                setTimeout(() => {
+                    htmx.ajax('GET', 'missao4.html', 'body', { swap: 'outerHTML' });
+                }, 1000);
+            } else {
+                quizMessage.textContent = 'Errado. Tente novamente!';
+                quizMessage.className = 'message incorrect';
+            }
+        }
+    </script>
+</body>
+</html>

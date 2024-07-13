@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados em apresentar uma funcionalidade sofisticada e poderosa do HTMX que
+            oferece um controle detalhado sobre as variáveis usadas nas requisições HTTP: o atributo `hx-vars`.
+            Com `hx-vars`, você pode definir variáveis dinâmicas que serão incluídas na requisição HTTP,
+            proporcionando uma maior flexibilidade e personalização nas interações do usuário. Vamos explorar
+            como essa funcionalidade pode elevar o nível das suas aplicações web.
+                
+        <p class="p2">
+            O que é o atributo `hx-vars`?
+            <br>
+            <br>
+            O `hx-vars` é um atributo do HTMX que permite definir variáveis JavaScript diretamente no HTML,
+            as quais serão incluídas nas requisições HTTP. Isso pode ser extremamente útil quando você
+            precisa enviar dados dinâmicos que são calculados ou obtidos no momento da interação do usuário,
+            sem a necessidade de escrever código JavaScript adicional.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-vars` pode ser usado. Suponha
+            que você tenha um botão que precisa enviar variáveis dinâmicas com base em valores de campos
+            de entrada na página:
+        </p>
+       
+        <p class="p4">
+            <img src="14.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, ao clicar no botão &quot;Converter&quot;, a requisição HTTP GET é enviada para a URL
+            &quot;/converter&quot;. Graças ao atributo `hx-vars`, uma variável `valorConvertido` é definida dinamicamente
+            com base nos valores dos campos de entrada `valor-usd` e `taxa-cambio`. A resposta do servidor é
+            então usada para atualizar dinamicamente o `div` com id &quot;resultado&quot;.
+        </p>
+        <button hx-get="landing/texto15/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Escolha Múltipla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyselecionar9">
+    <div class="principalselecionar9">
+        <header>
+            <h1 class="tituloselecionar9">Selecione a opção correta:</h1>
+        </header>
+    
+        <main id="main-content">
+            <h2 class="perguntaselecionar9">Define o alvo que será atualizado com a resposta.</h2>
+    
+            <form id="quizForm" class="escolhaselecionar9">
+                <div class="opcoesselecionar9">
+                    <input type="radio" id="morto" name="futuro" value="hx-history-elt">
+                    <label class="resposta1selecionar9" for="morto">hx-history-elt</label><br>
+    
+                    <input type="radio" id="desempregado" name="futuro" value="hx-target">
+                    <label class="resposta2selecionar9" for="desempregado">hx-target</label><br>
+
+                    <input type="radio" id="swap" name="futuro" value="hx-swap">
+                    <label class="resposta3selecionar9" for="swap">hx-swap</label><br>
+
+                    <input type="radio" id="headers" name="futuro" value="hx-headers">
+                    <label class="resposta4selecionar9" for="headers">hx-headers</label><br>
+
+                    <input type="radio" id="confirm" name="futuro" value="hx-confirm">
+                    <label class="resposta5selecionar9" for="confirm">hx-confirm</label><br>
+                </div>
+    
+                <div class="botoesselecionar9">
+                    <button class="botaoselecionar9" type="button" onclick="checkAnswer()">Enviar</button>
+                </div>
+            </form>
+    
+            <div class="messageselecionar9" id="quizMessage"></div>
+
+        </main>
+        <button hx-get="landing/texto10/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </div>
+ 
+    <script>
+        function checkAnswer() {
+            const quizForm = document.getElementById('quizForm');
+            const selectedOption = quizForm.querySelector('input[name="futuro"]:checked').value;
+            const quizMessage = document.getElementById('quizMessage');
+
+            if (selectedOption === 'hx-target') {
+                quizMessage.textContent = 'Resposta correta';
+                quizMessage.className = 'message correct';
+
+                setTimeout(() => {
+                    htmx.ajax('GET', 'missao4.html', 'body', { swap: 'outerHTML' });
+                }, 1000);
+            } else {
+                quizMessage.textContent = 'Errado. Tente novamente!';
+                quizMessage.className = 'message incorrect';
+            }
+        }
+    </script>
+</body>
+</html>

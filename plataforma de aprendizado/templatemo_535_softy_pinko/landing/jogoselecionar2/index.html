@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Escolha Múltipla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyselecionar2">
+    <div class="principalselecionar2">
+        <header>
+            <h1 class="tituloselecionar2">Selecione a opção correta:</h1>
+        </header>
+    
+        <main id="main-content">
+            <h2 class="perguntaselecionar2">Carrega conteúdo via requisição HTTP GET.</h2>
+    
+            <form id="quizForm" class="escolhaselecionar2">
+                <div class="opcoesselecionar2">
+                    <input type="radio" id="opcao1" name="metodo" value="hx-post">
+                    <label class="resposta1selecionar2" for="opcao1">hx-post</label><br>
+    
+                    <input type="radio" id="opcao2" name="metodo" value="hx-get">
+                    <label class="resposta2selecionar2" for="opcao2">hx-get</label><br>
+
+                    <input type="radio" id="opcao3" name="metodo" value="hx-put">
+                    <label class="resposta3selecionar2" for="opcao3">hx-put</label><br>
+
+                    <input type="radio" id="opcao4" name="metodo" value="hx-delete">
+                    <label class="resposta4selecionar2" for="opcao4">hx-delete</label><br>
+
+                    <input type="radio" id="opcao5" name="metodo" value="hx-trigger">
+                    <label class="resposta5selecionar2" for="opcao5">hx-trigger</label><br>
+                </div>
+    
+                <div class="botoesselecionar2">
+                    <button class="botaoselecionar2" type="button" onclick="checkAnswer()">Enviar</button>
+                </div>
+            </form>
+    
+            <div class="messageselecionar2" id="quizMessage"></div>
+            <button hx-get="landing/texto3/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+        </main>
+    </div>
+ 
+    <script>
+        function checkAnswer() {
+            const quizForm = document.getElementById('quizForm');
+            const selectedOption = quizForm.querySelector('input[name="metodo"]:checked').value;
+            const quizMessage = document.getElementById('quizMessage');
+
+            if (selectedOption === 'hx-get') {
+                quizMessage.textContent = 'Resposta correta';
+                quizMessage.className = 'message correct';
+
+                setTimeout(() => {
+                    // Aqui você pode adicionar sua lógica para o que deseja fazer após resposta correta
+                    // Por exemplo:
+                    // htmx.ajax('GET', 'missao5.html', 'body', { swap: 'outerHTML' });
+                }, 1000);
+            } else {
+                quizMessage.textContent = 'Errado. Tente novamente!';
+                quizMessage.className = 'message incorrect';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos animados para compartilhar com você uma funcionalidade essencial do HTMX que
+            melhora a experiência do usuário em suas aplicações web: o atributo `hx-indicator`. Com `hx-
+            indicator`, você pode facilmente exibir indicadores de carregamento enquanto uma requisição HTTP
+            está em andamento, informando aos usuários que uma ação está sendo processada. Vamos
+            explorar como essa funcionalidade pode tornar suas interações mais transparentes e agradáveis.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-indicator`?
+            <br>
+            <br>
+            O `hx-indicator` é um atributo do HTMX que permite especificar um elemento HTML que será
+            exibido como um indicador de carregamento durante a execução de uma requisição HTTP. Este
+            indicador pode ser qualquer elemento HTML, como um spinner, uma barra de progresso ou uma
+            mensagem de &quot;Carregando...&quot;. O `hx-indicator` melhora a experiência do usuário ao fornecer
+            feedback visual de que uma ação está sendo processada.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-indicator` pode ser usado.
+            Suponha que você tenha um botão que faz uma requisição para carregar dados e deseja exibir um
+            spinner de carregamento enquanto a requisição está em andamento:
+        </p>
+       
+        <p class="p4">
+            <img src="17.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, quando o botão &quot;Carregar&quot; é clicado, uma requisição HTTP GET é enviada para a
+            URL &quot;/carregar-dados&quot;. O elemento com id `spinner` é especificado como o indicador de
+            carregamento através do atributo `hx-indicator=&quot;#spinner&quot;`. Enquanto a requisição está em
+            andamento, o spinner é exibido, e quando a requisição é concluída, o spinner é ocultado
+            automaticamente.
+        </p>
+        <button hx-get="landing/texto18/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+        
+    </div>
+</body>
+</html>

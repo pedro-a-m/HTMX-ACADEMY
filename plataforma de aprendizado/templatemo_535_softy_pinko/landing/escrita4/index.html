@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 2 - Escrita</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyescrita4">
+    <div class="principalescrita4">
+        <header>
+            <h1 class="missao-2-escritaescrita4">Remover Dados</h1>
+        </header>
+        <main id="main-content">
+            <section class="centerescrita4">
+                <h2 class="digite-o-textoescrita4">Qual atributo HTMX é usado para remover dados via requisição HTTP DELETE?.</h2>
+                <input class="caixa-de-respostaescrita4" type="text" id="textInput" placeholder="Digite aqui...">
+                <div id="errorMessage" class="hidden errorescrita4" class="erro-textoescrita4">Erro: texto incorreto.</div>
+            </section>
+        </main>
+        <button hx-get="landing/texto6/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </div>
+    <script>
+        const textInput = document.getElementById('textInput');
+        const errorMessage = document.getElementById('errorMessage');
+        textInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const correctText = 'hx-delete';
+                if (textInput.value === correctText) {
+                    // Usa HTMX para carregar a próxima missão
+                    htmx.ajax('GET', 'missao3.html', '#main-content');
+                }
+                 else {
+                    errorMessage.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
+</body>

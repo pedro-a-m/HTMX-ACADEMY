@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body6">
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados em apresentar uma funcionalidade incrível do HTMX que vai transformar a forma como você interage com seus usuários: o atributo `hx-prompt`. Com `hx-prompt`, você pode exibir uma caixa de diálogo para entrada do usuário antes de enviar uma requisição ao servidor. Isso permite que você colete informações ou confirme ações de maneira simples e elegante, diretamente no HTML. Vamos explorar como essa funcionalidade pode aprimorar suas aplicações web.
+
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-prompt`?
+        </p>
+        
+        <p class="p3">
+            O `hx-prompt` é um atributo do HTMX que permite exibir uma caixa de diálogo (prompt) para o usuário antes de enviar uma requisição. Isso é extremamente útil quando você precisa de uma confirmação ou entrada direta do usuário antes de prosseguir com uma ação. A melhor parte? Tudo isso pode ser feito de forma declarativa, sem a necessidade de escrever código JavaScript adicional.
+
+        </p>
+       
+        <p class="p4">
+            Como Funciona?
+        </p>
+
+        <p class="p5">
+            Vamos ver um exemplo prático para entender melhor como o `hx-prompt` pode ser usado. Suponha que você tenha uma lista de tarefas e queira permitir que os usuários renomeiem uma tarefa ao clicar em um botão:
+        </p>
+      
+        <p class="p6">
+            <img src="5.png" alt="">
+        </p>
+
+        <p class="p7">
+            Neste exemplo, quando o usuário clica no botão "Renomear" ao lado de uma tarefa, o HTMX exibe uma caixa de diálogo (prompt) com a mensagem "Digite o novo nome da tarefa:". O valor inserido pelo usuário na caixa de diálogo é então enviado na requisição HTTP PUT para a URL especificada em `hx-put`. A resposta do servidor é inserida no elemento alvo especificado em `hx-target` (neste caso, o `div` com id "resposta"). Tudo isso acontece sem recarregar a página, proporcionando uma experiência de usuário mais fluida e eficiente.
+        </p>
+        <button hx-get="landing/jogoselecionar1/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+    </div>
+</body>
+</html>

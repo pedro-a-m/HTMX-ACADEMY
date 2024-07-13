@@ -1,0 +1,109 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Enigma com Arrastar e Soltar</title>
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body class="bodyarrastar1">
+    <header class="headerarrastar1">
+        <h1>Enigma com Arrastar e Soltar</h1>
+    </header>
+    <main class="mainarrastar1">
+        <section>
+            <h2 class="aras">Arraste as peças para formar a frase correta.</h2>
+            <div class="pieces-container" id="piecesContainer">
+                <div class="puzzle-piece" draggable="true" id="piece1"></div>
+                <div class="puzzle-piece" draggable="true" id="piece2"></div>
+                <div class="puzzle-piece" draggable="true" id="piece3"></div>
+                <div class="puzzle-piece" draggable="true" id="piece4"></div>
+            </div>
+            <div class="puzzle-container">
+                <div class="puzzle-slot" id="slot1"></div>
+                <div class="puzzle-slot" id="slot2"></div>
+                <div class="puzzle-slot" id="slot3"></div>
+                <div class="puzzle-slot" id="slot4"></div>
+            </div>
+            <div class="message" id="puzzleMessage"></div>
+        </section>
+        <button hx-get="landing/memoria1/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+    </main>
+    <script>
+        const pieces = document.querySelectorAll('.puzzle-piece');
+        const slots = document.querySelectorAll('.puzzle-slot');
+        const puzzleMessage = document.getElementById('puzzleMessage');
+        const piecesContainer = document.getElementById('piecesContainer');
+        let correctOrder = ['piece1', 'piece3', 'piece2', 'piece4'];
+
+        pieces.forEach(piece => {
+            piece.addEventListener('dragstart', handleDragStart);
+            piece.addEventListener('dragend', handleDragEnd);
+        });
+
+        slots.forEach(slot => {
+            slot.addEventListener('dragover', handleDragOver);
+            slot.addEventListener('dragleave', handleDragLeave);
+            slot.addEventListener('drop', handleDrop);
+        });
+
+        piecesContainer.addEventListener('dragover', handleDragOver);
+        piecesContainer.addEventListener('dragleave', handleDragLeave);
+        piecesContainer.addEventListener('drop', handleDrop);
+
+        function handleDragStart(event) {
+            event.dataTransfer.setData('text/plain', event.target.id);
+            event.dataTransfer.effectAllowed = 'move';
+            setTimeout(() => event.target.classList.add('hide'), 0);
+        }
+
+        function handleDragEnd(event) {
+            event.target.classList.remove('hide');
+        }
+
+        function handleDragOver(event) {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = 'move';
+            event.target.classList.add('dragover');
+        }
+
+        function handleDragLeave(event) {
+            event.target.classList.remove('dragover');
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            const pieceId = event.dataTransfer.getData('text');
+            const piece = document.getElementById(pieceId);
+            if (event.target.classList.contains('puzzle-slot') && !event.target.hasChildNodes()) {
+                event.target.appendChild(piece);
+                event.target.classList.remove('dragover');
+                checkPuzzle();
+            } else if (event.target.id === 'piecesContainer') {
+                piecesContainer.appendChild(piece);
+                event.target.classList.remove('dragover');
+                checkPuzzle();
+            }
+        }
+
+        function checkPuzzle() {
+            let isCorrect = true;
+            slots.forEach((slot, index) => {
+                if (slot.firstChild && slot.firstChild.id !== correctOrder[index]) {
+                    isCorrect = false;
+                }
+            });
+            if (isCorrect && Array.from(slots).every(slot => slot.hasChildNodes())) {
+                puzzleMessage.textContent = 'Parabéns! Você montou a frase correta.';
+                puzzleMessage.className = 'message correct';
+                setTimeout(() => {
+                    htmx.ajax('GET', 'missao2.html', '.content', 'innerHTML');
+                }, 2000);
+            } else {
+                puzzleMessage.textContent = 'Continue tentando!';
+                puzzleMessage.className = 'message incorrect';
+            }
+        }
+    </script>
+</body>
+</html>

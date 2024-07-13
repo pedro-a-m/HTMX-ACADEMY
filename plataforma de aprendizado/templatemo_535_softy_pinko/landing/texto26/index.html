@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            O HTMX oferece uma série de atributos poderosos para controlar o comportamento das
+            requisições e das respostas AJAX. Um desses atributos é o `hx-postswap`, que permite definir
+            ações específicas a serem tomadas após a substituição do conteúdo do DOM. Vamos explorar
+            como essa funcionalidade pode ser utilizada para criar interações mais refinadas em suas
+            aplicações web.
+    
+        <p class="p2">
+            O que é o atributo `hx-postswap`?
+            <br><br>
+            O `hx-postswap` é um atributo do HTMX que permite especificar um ou mais comportamentos
+            a serem executados após a substituição do conteúdo do DOM com a resposta AJAX. Isso pode
+            incluir ações como foco em um elemento, rolar a página até um ponto específico, ou até
+            mesmo executar um código JavaScript personalizado.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br><br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-postswap` pode ser usado.
+            Suponha que você tenha um formulário que, ao ser submetido, atualiza uma lista de itens e
+            você deseja que a página role automaticamente até o topo da lista atualizada.
+        </p>
+       
+        <p class="p4">
+            <img src="26.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, o formulário envia uma requisição POST para `/adicionar-item`, e a resposta
+            substitui o conteúdo do elemento `#lista-itens`. Após a substituição, o comportamento `scroll`
+            definido por `hx-postswap` faz com que a página role automaticamente até o topo da lista
+            atualizada.
+        </p>
+    </div>
+</body>
+</html>

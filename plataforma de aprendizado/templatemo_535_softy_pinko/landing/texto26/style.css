@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-image: url(background_img.jpg); 
+    font-size: 20px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.p1 {
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid transparent; 
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+    transition: background-color 0.3s ease;
+} 
+
+.p2 {
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid transparent; 
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+    transition: background-color 0.3s ease;
+} 
+
+.p3 {
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid transparent; 
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+    transition: background-color 0.3s ease;
+}  
+
+.p5 {
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid transparent; 
+    border-radius: 8px;
+    animation: fadeIn 0.5s ease;
+    transition: background-color 0.3s ease;
+} 
+
+.p1:hover {
+    background-color: #000000c3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.p2:hover {
+    background-color: #000000c3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.p3:hover {
+    background-color: #000000c3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.5s ease;
+    transition: transform 0.5s ease;
+}
+.p5:hover {
+    background-color: #000000c3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.5s ease;
+    transition: transform 0.5s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1;
+    }
+}

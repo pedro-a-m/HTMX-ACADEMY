@@ -1,0 +1,146 @@
+.bodyarrastar1 {
+    font-family: Arial, sans-serif;
+    background-image: url(images/fundo.png);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerarrastar1 {
+    color: #ffffff;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 120px;
+}
+
+.mainarrastar1 {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid;
+    border-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+    transform: scale(1.05);
+    /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+    /* Sombra ao passar o mouse */
+    margin-left: 580px;
+    margin-top: 80px;
+}
+
+.mainarrastar1:hover {
+    background-color: #06400000;
+    transition: all 0.3s ease;
+}
+
+.puzzle-container,
+.pieces-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.puzzle-piece,
+.puzzle-slot {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    transition: transform 0.2s ease;
+    will-change: transform;
+    background-color: #ffffffd1;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+}
+
+#piece1 {
+    background-image: url('img1a.jpeg');
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#slot1 {
+    background-image: url(img1b.jpeg);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#piece2 {
+    background-image: url('img3a.jpeg');
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#slot2 {
+    background-image: url(img5b.jpeg);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#piece3 {
+    background-image: url('img5a.jpeg');
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#slot3 {
+    background-image: url(img3b.jpeg);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#piece4 {
+    background-image: url('img12a.jpeg');
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+#slot4 {
+    background-image: url(img12b.jpeg);
+    box-shadow: 0 0 10px rgb(43, 255, 0);
+}
+
+.puzzle-piece:active {
+    cursor: grabbing;
+}
+
+.puzzle-slot {
+    border: 2px dashed #00000000;
+    cursor: pointer;
+}
+
+.puzzle-slot.dragover {
+    background-color: #f0f0f0;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.correct {
+    color: #008000;
+}
+
+.message.incorrect {
+    color: #ff0000d8;
+}
+
+.hide {
+    display: none;
+}
+
+.aras {
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}

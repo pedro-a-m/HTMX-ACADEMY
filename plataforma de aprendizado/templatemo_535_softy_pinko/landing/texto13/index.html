@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body13">
+    <div class="principal">
+        <p class="p1">
+            Estamos empolgados em apresentar uma funcionalidade que adiciona uma camada extra de
+            interação e segurança às suas aplicações web: o atributo `hx-confirm` do HTMX. Com `hx-confirm`,
+            você pode exibir uma mensagem de confirmação antes de realizar uma requisição HTTP, garantindo
+            que os usuários estejam cientes das ações que estão prestes a realizar. Vamos explorar como essa
+            funcionalidade pode elevar o nível das suas aplicações web.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-confirm`?
+            <br>
+            <br>
+            O `hx-confirm` é um atributo do HTMX que permite exibir uma mensagem de confirmação ao usuário
+            antes de enviar uma requisição HTTP. Isso é especialmente útil para ações críticas, como exclusões
+            de dados, onde você deseja que o usuário confirme sua intenção antes de prosseguir. Se o usuário
+            confirmar a ação, a requisição é enviada; caso contrário, a ação é cancelada.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-confirm` pode ser usado. Suponha
+            que você tenha um botão para excluir um item e deseja que o usuário confirme a ação antes de ela
+            ser realizada:
+        </p>
+       
+        <p class="p4">
+            <img src="13.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, quando o usuário clica no botão &quot;Excluir&quot; para qualquer item, uma mensagem de
+            confirmação &quot;Tem certeza de que deseja excluir este item?&quot; é exibida graças ao atributo `hx-
+            confirm`. Se o usuário confirmar a ação, a requisição HTTP DELETE é enviada para a URL
+            correspondente (&quot;/excluir-item/1&quot; ou &quot;/excluir-item/2&quot;), e a resposta é exibida no `div` com id
+            &quot;mensagem&quot;. Se o usuário cancelar a ação, a requisição não é enviada.
+        </p>
+        <button hx-get="landing/arrastar1/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+       
+        
+    </div>
+</body>
+</html>

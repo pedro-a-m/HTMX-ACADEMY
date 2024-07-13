@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <p class="p1">
+            Estamos entusiasmados em apresentar uma funcionalidade incrivelmente versátil e poderosa do
+            HTMX que permite estender e personalizar suas interações com o servidor: o atributo `hx-ext`. Com
+            `hx-ext`, você pode integrar extensões que adicionam funcionalidades avançadas às suas
+            requisições HTTP de forma simples e eficaz. Vamos explorar como essa funcionalidade pode
+            transformar suas aplicações web.
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-ext`?
+            <br>
+            <br>
+            O `hx-ext` é um atributo do HTMX que permite adicionar extensões às suas requisições HTTP. As
+            extensões são pequenos pedaços de código que podem modificar ou ampliar o comportamento
+            padrão das requisições HTMX. Isso pode incluir funcionalidades como animações, manipulação
+            avançada de dados e muito mais. O `hx-ext` torna a integração dessas extensões direta e sem
+            complicações.
+        </p>
+        
+        <p class="p3">
+            Como Funciona?
+            <br>
+            <br>
+            Vamos ver um exemplo prático para entender melhor como o `hx-ext` pode ser usado. Suponha que
+            você queira usar uma extensão que adiciona animação de carregamento enquanto uma requisição
+            está em andamento:
+        </p>
+       
+        <p class="p4">
+            <img src="16.png" alt="">
+        </p>
+      
+        <p class="p5">
+            Neste exemplo, estamos usando uma extensão fictícia chamada `htmx-ext-loading` que adiciona
+            uma animação de carregamento enquanto a requisição HTTP GET para &quot;/carregar-itens&quot; está em
+            andamento. A extensão é incluída através do atributo `hx-ext=&quot;loading&quot;`, garantindo que a animação
+            seja exibida durante o carregamento e removida quando a requisição for concluída.
+        </p>
+        <button hx-get="landing/texto17/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+        
+    </div>
+</body>
+</html>

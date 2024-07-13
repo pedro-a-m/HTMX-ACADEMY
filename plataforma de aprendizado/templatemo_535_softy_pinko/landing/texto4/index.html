@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAnding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body4">
+    <div class="principal">
+        <p class="p1">
+            Estamos entusiasmados em compartilhar com você uma das funcionalidades mais poderosas do HTMX: o atributo `hx-put`. Esta ferramenta incrível permite atualizar dados no servidor usando uma requisição HTTP PUT diretamente a partir de elementos HTML, sem a necessidade de escrever código JavaScript adicional. Vamos explorar como essa funcionalidade pode transformar a maneira como você desenvolve suas aplicações web.
+
+        </p>
+    
+        <p class="p2">
+            O que é o atributo `hx-put`?
+        </p>
+        
+        <p class="p3">
+            O `hx-put` é um atributo do HTMX que facilita o envio de dados ao servidor para atualização, utilizando o método HTTP PUT. Isso significa que você pode realizar operações de atualização de maneira declarativa, diretamente no HTML, simplificando a lógica de interatividade e tornando seu código mais limpo e fácil de manter.
+
+        </p>
+       
+        <p class="p4">
+            Como Funciona?
+        </p>
+
+        <p class="p5">
+            Vamos ver um exemplo prático para entender melhor como o `hx-put` pode ser usado. Suponha que você tenha um formulário para atualizar os dados de um usuário:
+        </p>
+      
+        <p class="p6">
+            <img src="4.png" alt="">
+        </p>
+
+        <p class="p7">
+            Neste exemplo, quando o usuário clica no botão "Atualizar", o HTMX faz uma requisição HTTP PUT para a URL especificada em `hx-put` (neste caso, "/atualizar-usuario/123"). A resposta do servidor é então inserida no elemento alvo especificado em `hx-target` (neste caso, o `div` com id "resposta"). Tudo isso acontece sem recarregar a página, proporcionando uma experiência de usuário mais fluida e eficiente.
+        </p>
+
+        <button hx-get="landing/texto5/index.html" hx-target="#content" onclick="console.log('Botão de Login clicado')">CONTINUAR</button>
+
+    </div>
+</body>
+</html>
